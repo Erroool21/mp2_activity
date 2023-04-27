@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cartify</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style1.css">
+    <link rel="icon" type="image/x-icon" href="./images/logo.png">
+    <script src="https://kit.fontawesome.com/4e2e947b54.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="index.html"><img src="./images/logo.png" height="40px"></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive"
+        aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="shopping.html">Shop</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Services</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Contact</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./assets/login.html">Login</a>
+          </li>
+        </ul>   
+      </div>
+    </div>
+  </nav> <br> <br> <br>
+
+
+
+  <header>
+    <center>
+    <div class=" d-flex searchbody">
+      <div class="container align-self-center" id="banner">
+        <h5 class="text-white banner-items text-center">Find items what you need the most</h5>
+        <div class="d-flex justify-content-center">
+          <div class="searchbar">
+            <input class="search_input" type="text" name="" placeholder="Search...">
+            <a href="#" class="search_icon"><i class="fas fa-search"></i></a>
+          </div>
+        </div> <br>
+        <h6 class="text-white text-center">Top searched items: <a href="">Honda Civic</a>, <a href="">Lot for sale, <a href=""></a><a href="">BGC condominiums</a>,<a href="">Macbeth, Iphones</a> </h6>
+      </div>
+       </div>
+      </center>
+  </header> <br>
+  
+
+  
+    <!-- carousel -->
+    <div id="carouselExampleCaptions" class="carousel slide carousel-fade" data-bs-ride="carousel">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+          aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+          aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+          aria-label="Slide 3"></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active" data-bs-interval="2000" style="background-image: url('./images/banner1.png')">
+          <div class="carousel-caption">
+            <h5>Pre-loved Laptops for you.</h5>
+            <p>Authentic and High quality laptops.</p>
+          </div>
+        </div>
+        <div class="carousel-item" data-bs-interval="2000" style="background-image: url('./images/banner2.png')">
+          <div class="carousel-caption">
+            <h5>Have your own wheels now.</h5>
+            <p>Cars and autos for affordable prices.</p>
+          </div>
+        </div>
+        <div class="carousel-item" data-bs-interval="2000" style="background-image: url('./images/banner3.png');">
+          <div class="carousel-caption">
+            <h5>Mobile Gadgets and Accesories.</h5>
+            <p>Iphones, Androids, Tablets and many more.</p>
+          </div>
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+        data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+        data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+  
+    <!-- cards -->
+    <div class="row">
+      <div class="col-md-12">
+        <center>
+          
+        <h5 class="container" style="margin-left: 0; margin-right: auto; width: 25rem;">Categories:</h5>
+          <div class="container" id="list">
+            
+          </div>
+        </center>
+      </div>
+    </div>
+
+    <!-- carousel cards -->
+    <section class="pt-5">
+      <div class="container">
+          <div class="row">
+              <div class="col-6">
+                  <h3 class="mb-3">Newly listed cars for sale</h3>
+              </div>
+              <div class="col-6 text-right">
+                  <a class="btn btn-primary mb-3 mr-1" href="#carouselExampleIndicators2" role="button" data-bs-slide="prev">
+                      <i class="fa fa-arrow-left"></i>
+                  </a>
+                  <a class="btn btn-primary mb-3 " href="#carouselExampleIndicators2" role="button" data-bs-slide="next">
+                      <i class="fa fa-arrow-right"></i>
+                  </a>
+              </div>
+              <div class="col-12">
+                  <div id="carouselExampleIndicators2" class="carousel slide" data-ride="carousel">
+  
+                      <div class="carousel-inner">
+                          <div class="carousel-item active">
+                              <div class="row">
+  
+                                  <div class="col-md-3 mb-3">
+                                      <div class="card">
+                                          <img class="img-fluid" alt="100%x280" src="./images/car1.jpg">
+                                          <a href="#">
+                                            <div class="card-body">
+                                              <h4 class="card-title">PHP 588,000</h4>
+                                              <p class="card-text">Toyota Vios 2021 - Manual</p>
+                                          </div>
+                                        </a>
+                                      </div>
+                                  </div>
+                                  <div class="col-md-3 mb-3">
+                                    <div class="card">
+                                        <img class="img-fluid" alt="100%x280" src="./images/car8.jpg">
+                                        <a href="#">
+                                          <div class="card-body">
+                                            <h4 class="card-title">PHP 600,000</h4>
+                                            <p class="card-text">Toyota Vios 2022 - Automatic</p>
+                                        </div>
+                                      </a>
+                                    </div>
+                                </div>
+                                  <div class="col-md-3 mb-3">
+                                      <div class="card">
+                                          <img class="img-fluid" alt="100%x280" src="./images/car2.jpg">
+                                          <a href="#">
+                                            <div class="card-body">
+                                              <h4 class="card-title">PHP 720,000</h4>
+                                              <p class="card-text">Toyota Vios 2022 - Automatic</p>
+                                          </div>
+                                        </a>
+                                      </div>
+                                  </div>
+                                  <div class="col-md-3 mb-3">
+                                      <div class="card">
+                                          <img class="img-fluid" alt="100%x280" src="./images/car3.jpg">
+                                          <a href="#">
+                                            <div class="card-body">
+                                              <h4 class="card-title">PHP 588,000</h4>
+                                              <p class="card-text">Toyota Vios 2020 - Manual</p>
+                                          </div>
+                                        </a>
+                                      </div>
+                                  </div>
+  
+                              </div>
+                          </div>
+                          <div class="carousel-item">
+                              <div class="row">
+  
+                                  <div class="col-md-3 mb-3">
+                                      <div class="card">
+                                          <img class="img-fluid" alt="100%x280" src="./images/car4.jpg">
+                                          <a href="#">
+                                            <div class="card-body">
+                                              <h4 class="card-title">PHP 600,000</h4>
+                                              <p class="card-text">Toyota Vios for sale</p>
+                                          </div>
+                                        </a>
+                                      </div>
+                                  </div>
+                                  <div class="col-md-3 mb-3">
+                                      <div class="card">
+                                          <img class="img-fluid" alt="100%x280" src="./images/car5.jpg">
+                                          <a href="#">
+                                            <div class="card-body">
+                                              <h4 class="card-title">PHP 400,000</h4>
+                                              <p class="card-text">Toyota Vios - 1yr used</p>
+                                          </div>
+                                        </a>
+                                      </div>
+                                  </div>
+                                  <div class="col-md-3 mb-3">
+                                      <div class="card">
+                                          <img class="img-fluid" alt="100%x280" src="./images/car6.jpg">
+                                          <a href="#">
+                                            <div class="card-body">
+                                              <h4 class="card-title">PHP 528,000</h4>
+                                              <p class="card-text">Toyota Vios 2021 - Manual</p>
+                                          </div>
+                                        </a>
+                                      </div>
+                                  </div>
+                                  <div class="col-md-3 mb-3">
+                                    <div class="card">
+                                        <img class="img-fluid" alt="100%x280" src="./images/car5.jpg">
+                                        <a href="#">
+                                          <div class="card-body">
+                                            <h4 class="card-title">PHP 700,000</h4>
+                                            <p class="card-text">Vios Automatic/Manual</p>
+                                        </div>
+                                      </a>
+                                    </div>
+                                </div>
+  
+                              </div>
+                          </div>
+                          <div class="carousel-item">
+                              <div class="row">
+  
+                                  <div class="col-md-3 mb-3">
+                                      <div class="card">
+                                          <img class="img-fluid" alt="100%x280" src="./images/car7.jpg">
+                                          <a href="#">
+                                            <div class="card-body">
+                                              <h4 class="card-title">PHP 588,000</h4>
+                                              <p class="card-text">Toyota Vios 2021 - Manual</p>
+                                          </div>
+                                        </a>
+                                      </div>
+                                  </div>
+                                  <div class="col-md-3 mb-3">
+                                      <div class="card">
+                                          <img class="img-fluid" alt="100%x280" src="./images/car8.jpg">
+                                          <a href="#">
+                                            <div class="card-body">
+                                              <h4 class="card-title">PHP 588,000</h4>
+                                              <p class="card-text">Toyota Vios 2021 - Manual</p>
+                                          </div>
+                                        </a>
+                                      </div>
+                                  </div>
+                                  <div class="col-md-3 mb-3">
+                                      <div class="card">
+                                          <img class="img-fluid" alt="100%x280" src="./images/car8.jpg">
+                                          <a href="#">
+                                            <div class="card-body">
+                                              <h4 class="card-title">PHP 588,000</h4>
+                                              <p class="card-text">Toyota Vios 2021 - Manual</p>
+                                          </div>
+                                        </a>
+                                      </div>
+                                  </div>
+                                  <div class="col-md-3 mb-3">
+                                    <div class="card">
+                                        <img class="img-fluid" alt="100%x280" src="./images/car8.jpg">
+                                        <a href="#">
+                                          <div class="card-body">
+                                            <h4 class="card-title">PHP 588,000</h4>
+                                            <p class="card-text">Toyota Vios 2021 - Manual</p>
+                                        </div>
+                                      </a>
+                                    </div>
+                                </div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </section>
+
+
+    <!-- carousel cards-->
+    <section class="pt-4 pb-5">
+      <div class="container">
+          <div class="row">
+              <div class="col-6">
+                  <h3 class="mb-3">New listed poperties for sale</h3>
+              </div>
+              <div class="col-6 text-right">
+                  <a class="btn btn-primary mb-3 mr-1" href="#carouselExampleIndicators3" role="button" data-bs-slide="prev">
+                      <i class="fa fa-arrow-left"></i>
+                  </a>
+                  <a class="btn btn-primary mb-3 " href="#carouselExampleIndicators3" role="button" data-bs-slide="next">
+                      <i class="fa fa-arrow-right"></i>
+                  </a>
+              </div>
+              <div class="col-12">
+                  <div id="carouselExampleIndicators3" class="carousel slide" data-ride="carousel">
+  
+                      <div class="carousel-inner">
+                          <div class="carousel-item active">
+                              <div class="row">
+  
+                                  <div class="col-md-3 mb-3 card2">
+                                      <div class="card">
+                                          <img class="img-fluid" alt="100%x280" src="./images/property1.jpg">
+                                          <a href="#">
+                                            <div class="card-body">
+                                              <h4 class="card-title">PHP 588,000</h4>
+                                              <p class="card-text">Toyota Vios 2021 - Manual</p>
+                                          </div>
+                                        </a>
+                                      </div>
+                                  </div>
+                                  <div class="col-md-3 mb-3 card2">
+                                    <div class="card">
+                                        <img class="img-fluid" alt="100%x280" src="./images/property2.jpg">
+                                        <a href="#">
+                                          <div class="card-body">
+                                            <h4 class="card-title">PHP 588,000</h4>
+                                            <p class="card-text">Toyota Vios 2021 - Manual</p>
+                                        </div>
+                                      </a>
+                                    </div>
+                                </div>
+                                  <div class="col-md-3 mb-3 card2">
+                                      <div class="card">
+                                          <img class="img-fluid" alt="100%x280" src="./images/property3.jpg">
+                                          <a href="#">
+                                            <div class="card-body">
+                                              <h4 class="card-title">PHP 588,000</h4>
+                                              <p class="card-text">Toyota Vios 2021 - Manual</p>
+                                          </div>
+                                        </a>
+                                      </div>
+                                  </div>
+                                  <div class="col-md-3 mb-3 card2">
+                                      <div class="card">
+                                          <img class="img-fluid" alt="100%x280" src="./images/property4.jpg">
+                                          <a href="#">
+                                            <div class="card-body">
+                                              <h4 class="card-title">PHP 588,000</h4>
+                                              <p class="card-text">Toyota Vios 2021 - Manual</p>
+                                          </div>
+                                        </a>
+                                      </div>
+                                  </div>
+  
+                              </div>
+                          </div>
+                          <div class="carousel-item">
+                              <div class="row">
+  
+                                  <div class="col-md-3 mb-3 card2">
+                                      <div class="card">
+                                          <img class="img-fluid" alt="100%x280" src="./images/property5.jpg">
+                                          <a href="#">
+                                            <div class="card-body">
+                                              <h4 class="card-title">PHP 588,000</h4>
+                                              <p class="card-text">Toyota Vios 2021 - Manual</p>
+                                          </div>
+                                        </a>
+                                      </div>
+                                  </div>
+                                  <div class="col-md-3 mb-3 card2">
+                                    <div class="card">
+                                        <img class="img-fluid" alt="100%x280" src="./images/property6.jpg">
+                                        <a href="#">
+                                          <div class="card-body">
+                                            <h4 class="card-title">PHP 588,000</h4>
+                                            <p class="card-text">Toyota Vios 2021 - Manual</p>
+                                        </div>
+                                      </a>
+                                    </div>
+                                </div>
+                                  <div class="col-md-3 mb-3 card2">
+                                      <div class="card">
+                                          <img class="img-fluid" alt="100%x280" src="./images/property7.jpg">
+                                          <a href="#">
+                                            <div class="card-body">
+                                              <h4 class="card-title">PHP 588,000</h4>
+                                              <p class="card-text">Toyota Vios 2021 - Manual</p>
+                                          </div>
+                                        </a>
+                                      </div>
+                                  </div>
+                                  <div class="col-md-3 mb-3 card2">
+                                      <div class="card">
+                                          <img class="img-fluid" alt="100%x280" src="./images/property8.jpg">
+                                          <a href="#">
+                                            <div class="card-body">
+                                              <h4 class="card-title">PHP 588,000</h4>
+                                              <p class="card-text">Toyota Vios 2021 - Manual</p>
+                                          </div>
+                                        </a>
+                                      </div>
+                                  </div>
+  
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </section>
+  <hr>
+
+
+    <div class="d-flex flex-column h-100">
+
+      <!-- FOR DEMO PURPOSE -->
+      <section class="hero text-white py-5 flex-grow-1">
+          <div class="container py-4">
+              <div class="row">
+                <center>
+                  <div class="col-lg-6">
+                      <h1 class="display-4 text-dark">You Sell, We Post,  </h1>
+                      <p class="fst-italic text-muted">Sell and buy every kinda thing on <a class="text-primary" href="https://bootstrapious.com/" target="_blank">Cartify Shopping Project</a></p>
+                  </div>
+                  <div class="row justify-content-center align-items-center g-2">
+                    <div class="col-md-4">
+                      <img src="./images/logo1.png" height="200px">
+                    </div>
+                    <div class="col-md-4"> 
+                      <img src="./images/logo2.png" height="200px">
+                    </div>
+                    <div class="col-md-4"> 
+                      <img src="./images/logo3.png" height="200px">
+                    </div>
+                  </div>
+                </center>
+              </div>
+          </div>
+      </section>
+  
+  
+      <!-- FOOTER -->
+      <footer class="w-100 py-4 flex-shrink-0">
+          <div class="container py-4">
+              <div class="row gy-4 gx-5">
+                  <div class="col-lg-4 col-md-6">
+                      <h5 class="h1 text-white">FB.</h5>
+                      <p class="small text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt.</p>
+                      <p class="small text-muted mb-0">&copy; Copyrights. All rights reserved. <a class="text-light" href="#">Blablabla</a></p>
+                  </div>
+                  <div class="col-lg-2 col-md-6">
+                      <h5 class="text-white mb-3">Quick links</h5>
+                      <ul class="list-unstyled text-muted">
+                          <li><a href="#">Home</a></li>
+                          <li><a href="#">About</a></li>
+                          <li><a href="#">Get started</a></li>
+                          <li><a href="#">FAQ</a></li>
+                      </ul>
+                  </div>
+                  <div class="col-lg-2 col-md-6">
+                      <h5 class="text-white mb-3">Quick links</h5>
+                      <ul class="list-unstyled text-muted">
+                          <li><a href="#">Home</a></li>
+                          <li><a href="#">About</a></li>
+                          <li><a href="#">Get started</a></li>
+                          <li><a href="#">FAQ</a></li>
+                      </ul>
+                  </div>
+                  <div class="col-lg-4 col-md-6">
+                      <h5 class="text-white mb-3">Newsletter</h5>
+                      <p class="small text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt.</p>
+                      <form action="#">
+                          <div class="input-group mb-3">
+                              <input class="form-control text-white" type="text" placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="button-addon2">
+                              <button class="btn btn-primary" id="button-addon2" type="button"><i class="fas fa-paper-plane"></i></button>
+                          </div>
+                      </form>
+                  </div>
+              </div>
+          </div>
+      </footer>
+  </div>
+    <script src="script.js"></script>
+</body>
+</html>
