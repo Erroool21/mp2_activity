@@ -28,11 +28,11 @@ function showcategories() {
     card_categories.forEach(function (category) {
         categories += `<div class="d-inline-flex mx-1 my-3 justify-content-center">
         <div class="card" style="width: 18rem;">
-        <img src="${category.image}" id="card-img" class="card-img-top" style="height: 150px">
+        <a href="#"><img src="${category.image}" id="card-img" class="card-img-top" style="height: 150px">
         <div class="card-body bg-light">
           <p class="card-title" style="height:20px""><b>${category.name}</b></p>
         </div>
-        </div>
+        </div></a>
         </div>`
     });
     cat_body.innerHTML = categories
