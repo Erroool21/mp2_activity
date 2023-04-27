@@ -75,7 +75,12 @@ body{
     text-decoration:none;
     }
 
-
+    .d-inline-flex {
+      transition: transform .2s;
+    }
+    .d-inline-flex:hover {
+      transform: scale(1.1);
+    }
   /* carousel */
 .carousel-item {
     height: 45vh;
