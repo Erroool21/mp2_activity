@@ -1,54 +1,63 @@
-function setFormMessage(formElement, type, message) {
-  const messageElement = formElement.querySelector(".form__message");
 
-  messageElement.textContent = message;
-  messageElement.classList.remove("form__message--success", "form__message--error");
-  messageElement.classList.add(`form__message--${type}`);
+
+
+window.onload = ()=>{
+  this.sessionStorage.setItem('username', 'admin');
+  this.sessionStorage.setItem('password', 'admin');
 }
 
-function setInputError(inputElement, message) {
-  inputElement.classList.add("form__input--error");
-  inputElement.parentElement.querySelector(".form__input-error-message").textContent = message;
+var input = document.getElementsByClassName('inputField');
+var login = document.getElementById('log-in');
+var form = document.querySelector('#login');
+form.onsubmit = ()=>{return false;}
+
+login.onclick = ()=>{
+
+  if ((input[0].value != "") && (input[1].value != ""))
+   {
+     if ((input[0].value == sessionStorage.getItem('username')) && (input[1].value == sessionStorage.getItem('password')))
+      {
+        form.onsubmit = ()=>{return 1;}
+        document.cookie = "username="+input[0].value;
+        document.cookie = "password="+input[1].value;
+      }
+      else
+      {
+        if ((input[0].value != sessionStorage.getItem('username')) )
+        {
+          input[0].nextElementSibling.textContent = "Username or Password is incorrect";
+        setTimeout(()=>{
+          input[0].nextElementSibling.textContent = "";
+        }, 2000);
+
+        }
+        if ((input[1].value != sessionStorage.getItem('password')) )
+        {
+          input[1].nextElementSibling.textContent = "Username or Password is incorrect";
+        setTimeout(()=>{
+          input[1].nextElementSibling.textContent = "";
+        }, 2000);
+
+        }
+
+      }
+
+   }
+  else
+   {
+    if (input[0].value == "")
+    {
+      input[0].nextElementSibling.textContent = "Username is empty";
+      setTimeout(()=>{
+        input[0].nextElementSibling.textContent = "";
+      }, 2000);
+    }
+    if (input[1].value == "")
+    {
+      input[1].nextElementSibling.textContent = "Password is empty";
+      setTimeout(()=>{
+        input[1].nextElementSibling.textContent = "";
+      }, 2000);
+    }
+   }
 }
-
-function clearInputError(inputElement) {
-  inputElement.classList.remove("form__input--error");
-  inputElement.parentElement.querySelector(".form__input-error-message").textContent = "";
-}
-
-document.addEventListener("DOMContentLoaded", () => {
-  const loginForm = document.querySelector("#login");
-  const createAccountForm = document.querySelector("#createAccount");
-
-  document.querySelector("#linkCreateAccount").addEventListener("click", e => {
-      e.preventDefault();
-      loginForm.classList.add("form--hidden");
-      createAccountForm.classList.remove("form--hidden");
-  });
-
-  document.querySelector("#linkLogin").addEventListener("click", e => {
-      e.preventDefault();
-      loginForm.classList.remove("form--hidden");
-      createAccountForm.classList.add("form--hidden");
-  });
-
-  loginForm.addEventListener("submit", e => {
-      e.preventDefault();
-
-      // Perform your AJAX/Fetch login
-
-      setFormMessage(loginForm, "error", "Invalid username/password combination");
-  });
-
-  document.querySelectorAll(".form__input").forEach(inputElement => {
-      inputElement.addEventListener("blur", e => {
-          if (e.target.id === "signupUsername" && e.target.value.length > 0 && e.target.value.length < 10) {
-              setInputError(inputElement, "Username must be at least 10 characters in length");
-          }
-      });
-
-      inputElement.addEventListener("input", e => {
-          clearInputError(inputElement);
-      });
-  });
-});
