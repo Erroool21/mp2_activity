@@ -85,7 +85,8 @@ body {
     #login{
       max-width: 55%;
 			margin: 200px auto;
-		}
+      box-shadow: 2px 2px 10px #8888884b;
+    }
 		.form__input-group{
 			margin: 15px auto;
 		}
