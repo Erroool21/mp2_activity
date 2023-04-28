@@ -6,9 +6,16 @@ let card_categories = [{
 
 },
 {
+    id: 2,
+    name: 'Gym Equipments',
+    image: './images/gym1.jpg'
+
+},
+{
     id: 3,
-    name: 'Iphones',
-    image: './images/iphone.png'
+    name: 'Electronics And Gadgets',
+    image: './images/iphone.png',
+    link: 'shopping.html'
 },
 {
     id: 4,
@@ -19,6 +26,21 @@ let card_categories = [{
     id: 5,
     name: "Womens' Fashion",
     image: './images/women.jpg'
+},
+{
+    id: 6,
+    name: "Furnitures",
+    image: './images/furniture.jpg'
+},
+{
+    id: 7,
+    name: "Hobbies and Toys",
+    image: './images/toys.jpg'
+},
+{
+    id: 8,
+    name: "Pet Supplies",
+    image: './images/petfoods.jpg'
 }
 ]
 
@@ -26,9 +48,9 @@ function showcategories() {
     let categories = "";
     let cat_body = document.getElementById('list');
     card_categories.forEach(function (category) {
-        categories += `<div class="d-inline-flex mx-1 my-3 justify-content-center">
+        categories += `<div class="d-inline-flex my-3 justify-content-center">
         <div class="card" style="width: 18rem;">
-        <a href="#"><img src="${category.image}" id="card-img" class="card-img-top" style="height: 150px">
+        <a href="${category.link}"><img src="${category.image}" id="card-img" class="card-img-top" style="height: 150px">
         <div class="card-body bg-light">
           <p class="card-title" style="height:20px""><b>${category.name}</b></p>
         </div>

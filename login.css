@@ -27,7 +27,7 @@ body {
   .searchbody {
     height: 70vh;
     width: 100%;
-    background-image: url('./images/property.png');
+    background-image: url('/mp2_activity/images/property.png');
     background-size:100%;
     background-repeat: no-repeat;
     max-width: 86%;
